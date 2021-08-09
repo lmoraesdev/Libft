@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 16:58:54 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/09 18:02:44 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/09 18:04:40 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	nb_ptr = ft_ptr_count(s, c);
 	ptr = (char **)malloc((nb_ptr + 1) * (sizeof(char)));
-	if (!str)
+	if (!ptr)
 		return (NULL);
 	i = 0;
 	while (i < nb_ptr)
