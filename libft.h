@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:19:26 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/06 17:51:04 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/09 15:16:12 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+# define INT_MIN -2147483648
+# define INT_MAX 2147483647
 
 /**
 * @brief check if the character passed is alphabetic.
@@ -171,7 +174,7 @@ char	*ft_strchr(const char *s, int c);
  */
 char	*ft_strrchr(const char *s, int c);
 
-/**
+/***
  * @brief .
  *
  * @param s1
@@ -181,7 +184,7 @@ char	*ft_strrchr(const char *s, int c);
  */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
-/**
+/***
  * @brief
  *
  * @param s
@@ -191,7 +194,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
  */
 void	*ft_memchr(const void *s, int c, size_t n);
 
-/**
+/***
  * @brief
  *
  * @param s1
@@ -201,7 +204,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
  */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
-/**
+/***
  * @brief
  *
  * @param big
@@ -211,7 +214,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
  */
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
-/**
+/***
  * @brief
  *
  * @param nptr
@@ -219,7 +222,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
  */
 int		ft_atoi(const char *nptr);
 
-/**
+/***
  * @brief
  *
  * @param nmemb
@@ -240,7 +243,7 @@ void	*ft_calloc(size_t nmemb, size_t size);
  */
 char	*ft_strdup(const char *s);
 
-/**
+/***
  * @brief
  *
  * @param s
@@ -250,7 +253,7 @@ char	*ft_strdup(const char *s);
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
-/**
+/***
  * @brief
  *
  * @param s1
@@ -259,7 +262,50 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
  */
 char	*ft_strjoin(char const *s1, char const *s2);
 
-/**
+/***
+ * @brief
+ *
+ * @param s1
+ * @param set
+ * @return char*
+ */
+char	*ft_strtrim(char const *s1, char const *set);
+
+/***
+ * @brief
+ *
+ * @param s
+ * @param c
+ * @return char**
+ */
+char	**ft_split(char const *s, char c);
+
+/***
+ * @brief
+ *
+ * @param n
+ * @return char*
+ */
+char	*ft_itoa(int n);
+
+/***
+ * @brief
+ *
+ * @param s
+ * @param f
+ * @return char*
+ */
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/***
+ * @brief
+ *
+ * @param s
+ * @param f
+ */
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+/***
  * @brief
  *
  * @param c
@@ -267,7 +313,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
  */
 void	ft_putchar_fd(char c, int fd);
 
-/**
+/***
  * @brief
  *
  * @param s
@@ -275,7 +321,7 @@ void	ft_putchar_fd(char c, int fd);
  */
 void	ft_putstr_fd(char *s, int fd);
 
-/**
+/***
  * @brief
  *
  * @param s
@@ -283,7 +329,7 @@ void	ft_putstr_fd(char *s, int fd);
  */
 void	ft_putendl_fd(char *s, int fd);
 
-/**
+/***
  * @brief
  *
  * @param n

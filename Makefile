@@ -44,4 +44,7 @@ re:			fclean all
 run:
 		clear && clang -Wall -Wextra -Werror *.c -I includes -lbsd && ./a.out
 
+runw:
+		bash libft-war-machine/grademe.sh
+
 .PHONY:		all clean fclean re
