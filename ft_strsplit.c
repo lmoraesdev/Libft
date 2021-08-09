@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 16:58:54 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/09 18:04:40 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/09 18:07:36 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static size_t ft_ptr_count(char const *s, char c)
 		if (s[i] != c && s[i] != '\0')
 		{
 			nb++;
-			while (si != c && s[i] != '\0')
+			while (s[i] != c && s[i] != '\0')
 				i++;
 		}
 	}
@@ -64,7 +64,7 @@ char	**ft_split(char const *s, char c)
 			s++;
 		else if (*s != c)
 		{
-			len_prt = 0;
+			len_ptr = 0;
 			while (s[len_ptr] != c && s[len_ptr] != 0)
 				len_ptr++;
 			tab[i] = ft_substr(s, 0, len_ptr);
