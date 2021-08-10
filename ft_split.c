@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 16:58:54 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/09 22:41:13 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/09 22:44:06 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void	pfree(char **ptr, size_t size)
 	}
 	free(ptr);
 	ptr = NULL;
-	return(ptr)
+	return (ptr);
 }
 
 char	**ft_split(char const *s, char c)
