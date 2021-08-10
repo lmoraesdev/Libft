@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 16:58:54 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/09 20:07:26 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/09 22:41:13 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,15 @@ static size_t ft_ptr_count(char const *s, char c)
 
 static void	pfree(char **ptr, size_t size)
 {
-	size_t	i;
-
-	i = -1;
-	while (++i < size)
+	while ((int)size >= 0)
 	{
-		free(ptr[i]);
-		ptr[i] = NULL;
+		free(ptr[size]);
+		ptr[size] = NULL;
+		size--;
 	}
 	free(ptr);
 	ptr = NULL;
+	return(ptr)
 }
 
 char	**ft_split(char const *s, char c)
