@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:19:26 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/09 15:16:12 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/10 23:10:23 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -336,5 +336,7 @@ void	ft_putendl_fd(char *s, int fd);
  * @param fd
  */
 void	ft_putnbr_fd(int n, int fd);
+
+t_list	*ft_lstnew(void *content);
 
 #endif

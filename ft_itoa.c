@@ -6,11 +6,12 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 12:05:49 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/09 13:56:19 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/10 21:56:05 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	ft_num_count(int n)
 {
@@ -19,7 +20,7 @@ static size_t	ft_num_count(int n)
 	count = 0;
 	if (n < 0)
 	{
-		n *= -1;
+		n = n * -1;
 		count++;
 	}
 	while (n)
@@ -44,11 +45,15 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	if (n < 0)
-		str[0] = '-';
-	str[num_len] = '\0';
-	while (num_len)
 	{
-		str[num_len - 1] = (n % 10) + '0';
+		str[0] = '-';
+		n = n * -1;
+	}
+	str[num_len] = '\0';
+	num_len--;
+	while (n > 0)
+	{
+		str[num_len] = (n % 10) + '0';
 		n = n / 10;
 		num_len--;
 	}
