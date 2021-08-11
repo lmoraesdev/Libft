@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:19:26 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/11 13:32:44 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/11 14:53:08 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -343,14 +343,78 @@ void	ft_putendl_fd(char *s, int fd);
  */
 void	ft_putnbr_fd(int n, int fd);
 
+/***
+ * @brief
+ *
+ * @param content
+ * @return t_list*
+ */
 t_list	*ft_lstnew(void *content);
+
+/***
+ * @brief
+ *
+ * @param lst
+ * @param new
+ */
 void	ft_lstadd_front(t_list **lst, t_list *new);
+
+/***
+ * @brief
+ *
+ * @param lst
+ * @return int
+ */
 int		ft_lstsize(t_list *lst);
+
+/***
+ * @brief
+ *
+ * @param lst
+ * @return t_list*
+ */
 t_list	*ft_lstlast(t_list *lst);
+
+/***
+ * @brief
+ *
+ * @param lst
+ * @param new
+ */
 void	ft_lstadd_back(t_list **lst, t_list *new);
+
+/***
+ * @brief
+ *
+ * @param lst
+ * @param del
+ */
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
+
+/***
+ * @brief
+ *
+ * @param lst
+ * @param del
+ */
 void	ft_lstclear(t_list **lst, void (*del)(void*));
+
+/***
+ * @brief
+ *
+ * @param lst
+ * @param f
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+/***
+ * @brief
+ *
+ * @param lst
+ * @param f
+ * @param del
+ * @return t_list*
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
