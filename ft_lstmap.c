@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 13:09:39 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/11 13:38:58 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/11 19:24:11 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstadd_back(&new, list);
 		lst = lst->next;
 	}
-	return (list);
+	return (new);
 }

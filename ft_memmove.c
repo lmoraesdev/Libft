@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 15:58:10 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/09 14:16:41 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/11 19:38:52 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	tdest = (unsigned char *)dest;
 	tsrc = (unsigned char *)src;
 	i = 0;
+	if ((!src && !dest) || !n )
+		return (dest);
 	if (tsrc < tdest)
 		while (++i <= n)
 			tdest[n - i] = tsrc[n - i];

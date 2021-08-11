@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 15:57:55 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/05 17:56:29 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/11 19:37:49 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	ptr = (unsigned char *)dest;
 	ptr2 = (unsigned char *)src;
-	if (ptr2 == 0)
-		return (NULL);
+	if ((!src && !dest) || !n )
+		return (dest);
 	while (n--)
 		*ptr++ = *ptr2++;
 	return (dest);

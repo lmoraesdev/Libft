@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 12:04:40 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/09 12:05:08 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/11 19:41:38 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t			len;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s) + 1;
 	dest = (char *)malloc((sizeof(char) * len));
 	if (!dest)

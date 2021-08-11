@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 21:45:44 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/05 18:00:22 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/08/11 19:40:57 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t			slen;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	slen = ft_strlen((char *)s);
 	if (slen > start)
 		i = ft_my(ft_strlen(s + start), len);
