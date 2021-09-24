@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:19:26 by lbatista          #+#    #+#             */
-/*   Updated: 2021/09/24 14:35:40 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/09/24 15:01:34 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -498,8 +498,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /**
- * @briefThe uitoa_base() converts an unsigned integer into a string, passing it to
-*	the base given as an argument.
+ * @briefThe uitoa_base() converts an unsigned integer into a string,
+ * passing it to the base given as an argument.
  *
  * @param nbr The unsigned long to convert.
  * @param base The base in which to convert the number to
@@ -508,8 +508,9 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 char	*ft_uitoa_base(unsigned long nbr, char *base);
 
 /**
- * @brief The strdup() function allocates sufficient memory for a copy of the string
- * s1, up until a 'n' total bytesm, does the copy, and returns a pointer to it.
+ * @brief The strdup() function allocates sufficient memory
+ * for a copy of the strings1, up until a 'n' total bytesm,
+ * does the copy, and returns a pointer to it.
  *
  * @param s1 The string to duplicate.
  * @param n The number of bytes to duplicate
@@ -528,7 +529,8 @@ char	*ft_strndup(const char *s1, size_t n);
 void	ft_free_ptr(void **ptr);
 
 /**
- * @brief Allocates (with malloc(3)) and returns a new string, which is the result of
+ * @brief Allocates (with malloc(3)) and returns a new string,
+ * which is the result of 
  * the concatenation of ’s’ and the char ’c’.
  *
  * @param s The prefix string.

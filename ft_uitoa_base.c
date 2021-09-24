@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 13:20:33 by lbatista          #+#    #+#             */
-/*   Updated: 2021/09/24 13:22:29 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/09/24 14:59:26 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,3 @@ char	*ft_uitoa_base(unsigned long nbr, char *base)
 	ft_convbase(nbr, number, base, len_nbr);
 	return (number);
 }
-
-
-

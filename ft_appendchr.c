@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 14:34:38 by lbatista          #+#    #+#             */
-/*   Updated: 2021/09/24 14:34:51 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/09/24 14:58:52 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ char	*ft_appendchr(char const *s, char const c)
 	ccat[i++] = c;
 	ccat[i] = '\0';
 	return (ccat);
-
