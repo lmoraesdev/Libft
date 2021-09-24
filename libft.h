@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:19:26 by lbatista          #+#    #+#             */
-/*   Updated: 2021/08/11 21:04:03 by lbatista         ###   ########.fr       */
+/*   Updated: 2021/09/24 14:14:32 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -496,5 +496,45 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
  * @param f  The adress of the function used to iterate on the list.
  */
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+/**
+ * @briefThe uitoa_base() converts an unsigned integer into a string, passing it to
+*	the base given as an argument.
+ *
+ * @param nbr The unsigned long to convert.
+ * @param base The base in which to convert the number to
+ * @return The string representing the converted number.
+ */
+char	*ft_uitoa_base(unsigned long nbr, char *base);
+
+/**
+ * @brief The strdup() function allocates sufficient memory for a copy of the string
+ * s1, up until a 'n' total bytesm, does the copy, and returns a pointer to it.
+ *
+ * @param s1 The string to duplicate.
+ * @param n The number of bytes to duplicate
+ * @return The strdup() function returns the pointer to the copy of s1.
+ */
+char	*ft_strndup(const char *s1, size_t n);
+
+/**
+ * @brief Deallocates the pointer memory address previously allocated
+ * by a call to calloc, malloc, or realloc.
+ *
+ * @param ptr This is the pointer address to a memory block previously
+ * allocated with malloc, calloc or realloc to be deallocated.
+ * If a null pointer is passed as argument, no action occurs.
+ */
+void	ft_free_ptr(void **ptr);
+
+/**
+ * @brief Allocates (with malloc(3)) and returns a new string, which is the result of
+ * the concatenation of ’s’ and the char ’c’.
+ *
+ * @param s The prefix string.
+ * @param c The suffix char.
+ * @return The new string. NULL if the allocation fails.
+ */
+char	*ft_appendchr(char const *s, char const c);
 
 #endif
